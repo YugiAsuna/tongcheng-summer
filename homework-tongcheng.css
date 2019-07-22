@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+* :root,
+* body {
+  background-color: #13b3c7;
+}
+.container {
+  background-color: #13b3c7;
+}
+.container .top-nav {
+  background-color: white;
+}
+.container .top-nav .content {
+  width: 1190px;
+  height: 52px;
+  margin: 0 auto;
+}
+.container .top-nav .content .logo {
+  float: left;
+}
+.container .top-nav .content .nav {
+  float: right;
+}
+.container .top-nav .content .nav .nav-item {
+  float: left;
+  margin-left: 30px;
+  height: 52px;
+  line-height: 52px;
+}
+.container .top-nav .content .nav .nav-item a {
+  color: #666;
+  font-size: 14px;
+}
+.container .top-nav .content .nav .nav-item a:hover {
+  color: #ff5d3d;
+  text-decoration: underline;
+}
+.container .top-nav .content .nav ul::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.container .top-nav .content::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.container .city-nav {
+  background-color: #28a084;
+}
+.container .city-nav .content {
+  width: 1020px;
+  height: 50px;
+  margin: 0 auto;
+}
+.container .city-nav .content .city-choose {
+  float: left;
+  width: 155px;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 9px 45px 9px 0;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ffc000;
+  border-radius: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .city-nav .content .city-choose img {
+  height: 22px;
+  vertical-align: -3px;
+}
+.container .city-nav .content .city-choose .city-select {
+  margin-left: -5px;
+}
+.container .city-nav .content .city-choose ::before {
+  display: block;
+  background: url("images/dingwei.png") top center no-repeat;
+}
+.container .city-nav .content .nav-item {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container .city-nav .content .nav-item :hover {
+  color: #fcff00;
+}
+.container .city-nav .content .nav-item.selected {
+  text-align: center;
+  background-color: #ffc000;
+}
+.container .city-nav .content .more-city {
+  position: relative;
+  float: right;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+@keyframes more {
+  0% {
+    margin-top: 22px;
+    border: 5px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  50% {
+    border: 5px solid white;
+    border-color: transparent;
+  }
+  100% {
+    margin-top: 17px;
+    border: 5px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+}
+@keyframes less {
+  0% {
+    margin-top: 17px;
+    border: 5px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+  50% {
+    border: 5px solid white;
+    border-color: transparent;
+  }
+  100% {
+    margin-top: 22px;
+    border: 5px solid white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+}
+.container .city-nav .content .more-city span {
+  float: left;
+}
+.container .city-nav .content .more-city .more-tri {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  margin-top: 22px;
+  margin-left: 5px;
+  border: 5px solid white;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.container .city-nav .content .more-city ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .city-nav .content::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .city-nav.scroll {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: #28a084;
+}
+.container .city-nav.scroll .content {
+  width: 1020px;
+  height: 50px;
+  margin: 0 auto;
+}
+.container .city-nav.scroll .content .city-choose {
+  float: left;
+  width: 155px;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 9px 45px 9px 0;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ffc000;
+  border-radius: 32px;
+}
+.container .city-nav.scroll .content .city-choose img {
+  height: 22px;
+  vertical-align: -3px;
+}
+.container .city-nav.scroll .content .city-choose .city-select {
+  margin-left: -5px;
+}
+.container .city-nav.scroll .content .city-choose ::before {
+  display: block;
+  background: url("images/dingwei.png") top center no-repeat;
+}
+.container .city-nav.scroll .content .nav-item {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container .city-nav.scroll .content .nav-item :hover {
+  color: #fcff00;
+}
+.container .city-nav.scroll .content .nav-item.selected {
+  text-align: center;
+  background-color: #ffc000;
+}
+.container .city-nav.scroll .content .more-city {
+  position: relative;
+  float: right;
+  height: 50px;
+  line-height: 50px;
+}
+.container .city-nav.scroll .content .more-city a {
+  color: #ffffff;
+  font-size: 18px;
+}
+.container .city-nav.scroll .content .more-city a .more-tri {
+  display: block;
+  position: absolute;
+  right: -16px;
+  bottom: 16px;
+  width: 0;
+  height: 0;
+  border: 5px solid white;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.container .city-nav.scroll .content .more-city a ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .city-nav.scroll .content::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .city-nav-more {
+  background-color: #28a084;
+}
+.container .city-nav-more .content {
+  width: 1020px;
+  height: 50px;
+  margin: 0 auto;
+}
+.container .city-nav-more .content ul {
+  margin-left: 283px;
+}
+.container .city-nav-more .content ul .nav-item {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container .city-nav-more .content ul .nav-item :hover {
+  color: #fcff00;
+}
+.container .city-nav-more .content ul .nav-item.selected {
+  text-align: center;
+  background-color: #ffc000;
+}
+.container .city-nav-more .content::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .city-nav-more.scroll {
+  position: fixed;
+  width: 100%;
+  top: 50px;
+  z-index: 999;
+  background-color: #28a084;
+}
+.container .city-nav-more.scroll .content {
+  width: 1020px;
+  height: 50px;
+  margin: 0 auto;
+}
+.container .city-nav-more.scroll .content ul {
+  margin-left: 220px;
+}
+.container .city-nav-more.scroll .content ul .nav-item {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container .city-nav-more.scroll .content ul .nav-item :hover {
+  color: #fcff00;
+}
+.container .city-nav-more.scroll .content ul .nav-item.selected {
+  text-align: center;
+  background-color: #ffc000;
+}
+.container .city-nav-more.scroll .content::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .banner {
+  height: 703px;
+  background: url("images/bg1.jpg") center top no-repeat #13b3c7;
+}
+.container .hot {
+  height: 801px;
+  background: url("images/bg2.jpg") top center no-repeat #13b3c7;
+}
+.container .hot .hot-image {
+  height: 420px;
+}
+.container .hot .content {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container .hot .content ul li {
+  float: left;
+  width: 235px;
+  margin: 0 10px;
+}
+.container .hot .content ul li .top {
+  position: relative;
+}
+.container .hot .content ul li .top .city-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 5px;
+  font-size: 12px;
+  line-height: 17px;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(83, 96, 110, 0.9);
+}
+.container .hot .content ul li .top img {
+  display: block;
+  width: 235px;
+  height: 180px;
+}
+.container .hot .content ul li .top .intro {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgba(83, 96, 110, 0.9);
+  line-height: 28px;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .hot .content ul li .top .intro.hover {
+  position: absolute;
+  box-sizing: border-box;
+  height: 180px;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgba(83, 96, 110, 0.9);
+  line-height: 28px;
+  padding: 20px 20px 0;
+  white-space: normal;
+  overflow: inherit;
+  text-overflow: inherit;
+}
+.container .hot .content ul li .bottom {
+  background-color: #ffffff;
+  padding: 10px;
+}
+.container .hot .content ul li .bottom .travel-title {
+  height: 40px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.container .hot .content ul li .bottom .travel-title a {
+  color: #333;
+  font-size: 14px;
+}
+.container .hot .content ul li .bottom .price {
+  font-size: 12px;
+  color: #fc653c;
+  margin-bottom: 5px;
+}
+.container .hot .content ul li .bottom .price span {
+  display: inline-block;
+}
+.container .hot .content ul li .bottom .price .big-number {
+  font-size: 30px;
+  margin-right: 2px;
+}
+.container .hot .content ul li .bottom .scout {
+  font-size: 12px;
+  color: #fc653c;
+  margin-bottom: 7px;
+}
+.container .hot .content ul ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .onSale .sale-image {
+  height: 481px;
+  background: url("images/bg3.jpg") center top no-repeat #13b3c7;
+}
+.container .onSale .content {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container .onSale .content ul {
+  overflow: hidden;
+}
+.container .onSale .content ul li {
+  float: left;
+  width: 235px;
+  margin: 0 10px 20px;
+}
+.container .onSale .content ul li .top {
+  position: relative;
+}
+.container .onSale .content ul li .top .city-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 5px;
+  font-size: 12px;
+  line-height: 17px;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(83, 96, 110, 0.9);
+}
+.container .onSale .content ul li .top img {
+  display: block;
+  width: 235px;
+  height: 180px;
+}
+.container .onSale .content ul li .top .intro {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgba(83, 96, 110, 0.9);
+  line-height: 28px;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .onSale .content ul li .top .intro.hover {
+  position: absolute;
+  box-sizing: border-box;
+  height: 180px;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgba(83, 96, 110, 0.9);
+  line-height: 28px;
+  padding: 20px 20px 0;
+  white-space: normal;
+  overflow: inherit;
+  text-overflow: inherit;
+}
+.container .onSale .content ul li .bottom {
+  background-color: #ffffff;
+  padding: 10px;
+}
+.container .onSale .content ul li .bottom .travel-title {
+  height: 40px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.container .onSale .content ul li .bottom .travel-title a {
+  color: #333;
+  font-size: 14px;
+}
+.container .onSale .content ul li .bottom .price {
+  font-size: 12px;
+  color: #fc653c;
+  margin-bottom: 5px;
+}
+.container .onSale .content ul li .bottom .price span {
+  display: inline-block;
+}
+.container .onSale .content ul li .bottom .price .big-number {
+  font-size: 30px;
+  margin-right: 2px;
+}
+.container .onSale .content ul li .bottom .scout {
+  font-size: 12px;
+  color: #fc653c;
+  margin-bottom: 7px;
+}
+.container .onSale .content ul ::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .copyright {
+  height: 140px;
+  background: url("//pic5.40017.cn/04/000/ab/f0/rBTJUl0tlqSAW0PBAAAsWUdFDWE728.jpg") center center no-repeat;
+}
